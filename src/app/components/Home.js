@@ -10,7 +10,7 @@ const HomeComponent = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
 
-      const response = await fetch('http://127.0.0.1:5000/create', {
+      const response = await fetch('https://urlshortenrbackend-ed843dpqz-abdulmateens-projects.vercel.app/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
