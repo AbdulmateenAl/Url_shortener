@@ -10,7 +10,7 @@ const HomeComponent = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
 
-      const response = await fetch('https://urlshortenrbackend-ed843dpqz-abdulmateens-projects.vercel.app/create', {
+      const response = await fetch(process.env.NEXT_PUBLIC_POST_LINK, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -37,7 +37,7 @@ const HomeComponent = () => {
           </div>
           {shortUrl && (
             <div className="mt-4">
-              <p>Your shortened Url: <a onClick={() => {setCount(count + 1)}} href={longUrl} target="_blank" rel="noopener noreferral">{shortUrl}</a></p>
+              <p>Your shortened Url: <a onClick={() => {setCount(count + 1)}} href={shortUrl} target="_blank" rel="noopener noreferral">{shortUrl}</a></p>
               {count && (
                 <div>
                   <p>Url has been clicked <strong>{count}</strong> times</p>
