@@ -38,7 +38,7 @@ const HomeComponent = () => {
           {shortUrl && (
             <div className="mt-4">
               <p>Your shortened Url: <a onClick={() => {setCount(count + 1)}} href={shortUrl} target="_blank" rel="noopener noreferral">{shortUrl}</a></p>
-              {count && (
+              {count > 0 && (
                 <div>
                   <p>Url has been clicked <strong>{count}</strong> times</p>
                 </div>
